@@ -86,9 +86,12 @@ function resetform() {
 function onDelet(A) {
 	console.log("delete_ok")
 	if (confirm("are you sure you want to delete")) {
-		let row = A.parentElement.parentElement;
+		var row = A.parentElement.parentElement;
 		document.getElementById("list").deleteRow(row.rowIndex);
-	
+	}
+	if(row==editD)
+	{
+		resetform();
 	}
 }
 
